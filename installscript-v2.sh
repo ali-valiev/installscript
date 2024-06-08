@@ -73,6 +73,7 @@ cp -r "$dotfiles_dir/alacritty/" "$config_dir/alacritty/"
 cp -r "$dotfiles_dir/dunst/"		 "$config_dir/dunst/"
 
 cd "$config_dir/suckless/"
+echo "Sudo privileges are needed to compile and install DWM/Dmenu"
 bash build-all.sh
 
 if [ "$dwm_autostart" == "true"]; then
