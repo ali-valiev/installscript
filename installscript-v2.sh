@@ -67,7 +67,7 @@ git clone "$github/suckless" "$config_dir/suckless/"
 
 
 cp "$dotfiles_dir/bashrc"	"$home_dir/.bashrc"
-cp "$dotfiles_dir/xinitc" "$home_dir/.xinitrc"
+cp "$dotfiles_dir/xinitrc" "$home_dir/.xinitrc"
 
 cp -r "$dotfiles_dir/alacritty/" "$config_dir/alacritty/"
 cp -r "$dotfiles_dir/dunst/"		 "$config_dir/dunst/"
@@ -81,5 +81,5 @@ if [ "$dwm_autostart" == "true"]; then
 if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
     exec startx
 fi
-' >> ~/.bash_profile
+' >> "$home_dir/.bash_profile"
 fi
